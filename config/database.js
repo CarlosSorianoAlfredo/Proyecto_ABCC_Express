@@ -1,5 +1,5 @@
 'use strict';
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const conexion = mysql.createConnection({
     host : 'b9jcqyojldotphhzdsf4-mysql.services.clever-cloud.com',
