@@ -2,10 +2,11 @@
 const mysql = require('mysql');
 
 const conexion = mysql.createConnection({
-    host : 'localhost',
-    user : 'alfredocarlos',
-    password : 'itsj',
-    database: 'BD_Express_2025'
+    host : 'turntable.proxy.rlwy.net',
+    user : 'root',
+    password : 'eMiADMROyKQOPkvlRCdRLAwetbyTVbnd',
+    database: 'railway',
+    port: 34376,
 });
 
 
