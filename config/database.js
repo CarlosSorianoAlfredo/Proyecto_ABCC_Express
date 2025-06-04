@@ -2,11 +2,11 @@
 const mysql = require('mysql');
 
 const conexion = mysql.createConnection({
-    host : 'turntable.proxy.rlwy.net',
-    user : 'root',
-    password : 'eMiADMROyKQOPkvlRCdRLAwetbyTVbnd',
-    database: 'railway',
-    port: 34376,
+    host : 'b9jcqyojldotphhzdsf4-mysql.services.clever-cloud.com',
+    user : 'u6o0wiyeaxj1ytkv',
+    password : 'Zsau1UbJL52RxuEsX91P',
+    database: 'b9jcqyojldotphhzdsf4',
+    port: 3306,
 });
 
 
