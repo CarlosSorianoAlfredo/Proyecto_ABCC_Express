@@ -30,7 +30,7 @@ Alumno.create = function (alumno, result) {
 
 // ----- BAJAS -----
 Alumno.delete = function(nc, result){
-    conexion.query("DELETE FROM alumnos WHERE Num_Control = ?", [nc], function(err, res){
+    conexion.query("DELETE FROM alumnos WHERE num_control = ?", [nc], function(err, res){
         if(err){
             console.log('Error: ', err);
             result(err, null);
@@ -47,9 +47,9 @@ Alumno.update = function(id, alumno, result){
     console.log("---------->", alumno);
 
 
-    conexion.query("UPDATE alumnos SET Nombre=?, Primer_Ap=?, Segundo_Ap=?, Fecha_Nac=?, Semestre=?, Carrera=? WHERE Num_Control=?",
-        [alumno.nombre, alumno.Primer_Ap, alumno.Segundo_Ap, alumno.Fecha_Nac, 
-            alumno.Semestre, alumno.Carrera, alumno.Num_Control], function(err, res){
+    conexion.query("UPDATE alumnos SET nombre=?, primer_ap=?, segundo_ap=?, fecha_nac=?, semestre=?, carrera=? WHERE num_control=?",
+        [alumno.nombre, alumno.primer_ap, alumno.segundo_ap, alumno.fecha_nac, 
+            alumno.semestre, alumno.carrera, alumno.num_control], function(err, res){
                 if(err){
                     console.log('Error: ', err);
                     result(null, err);
@@ -62,7 +62,7 @@ Alumno.update = function(id, alumno, result){
 
 //----- CONSULTAS -----
 Alumno.findById = function(nc, result){
-    conexion.query("SELECT * FROM alumnos WHERE Num_Control=?", nc, function(err,res){
+    conexion.query("SELECT * FROM alumnos WHERE num_control=?", nc, function(err,res){
         if(err){
             console.log('Error: ', err);
             result(null, err);
