@@ -19,14 +19,15 @@ exports.create = function(req, res){
         res.status(400).send({error: true, message: 'Falta informacion'});
     }else{
         const a = {
-            Num_Control : req.body.num_control,
-            Nombre : req.body.nombre,
-            Primer_Ap : req.body.primer_ap,
-            Segundo_Ap : req.body.segundo_ap,
-            Fecha_Nac : req.body.fecha_nac,
-            Semestre : req.body.semestre,
-            Carrera : req.body.carrera  
-        }
+    numControl : req.body.num_control,
+    nombre : req.body.nombre,
+    primerAp : req.body.primer_ap,
+    segundoAp : req.body.segundo_ap,
+    fechaNac : req.body.fecha_nac,
+    semestre : req.body.semestre,
+    carrera : req.body.carrera  
+}
+
 
         const alumno = new Alumno(a);
 
@@ -65,14 +66,15 @@ exports.update = function(req, res) {
       console.log("actualizar: " + req.body.carrera);
     
       const a = {
-        Num_Control : req.body.num_control,
-        Nombre : req.body.nombre,
-        Primer_Ap : req.body.primer_ap,
-        Segundo_Ap : req.body.segundo_ap,
-        Fecha_Nac : req.body.fecha_nac,
-        Semestre : req.body.semestre,
-        Carrera : req.body.carrera  
-    }
+    numControl : req.body.num_control,
+    nombre : req.body.nombre,
+    primerAp : req.body.primer_ap,
+    segundoAp : req.body.segundo_ap,
+    fechaNac : req.body.fecha_nac,
+    semestre : req.body.semestre,
+    carrera : req.body.carrera  
+}
+
 
       Alumno.update(req.params.id, new Alumno(a), function(err, alumno) {      
         req.flash('message', 'Alumno ACTUALIZADO Correctamente !');
