@@ -3,14 +3,15 @@
 const conexion = require('../config/database');
 
 let Alumno = function(alumno){
-    this.numControl = alumno.num_control;
+    this.numControl = alumno.numControl;
     this.nombre = alumno.nombre;
-    this.primerAp = alumno.primer_ap;
-    this.segundoAp = alumno.segundo_ap;
-    this.fechaNac = alumno.fecha_nac;
+    this.primerAp = alumno.primerAp;
+    this.segundoAp = alumno.segundoAp;
+    this.fechaNac = alumno.fechaNac;
     this.semestre = alumno.semestre;
     this.carrera = alumno.carrera; 
 };
+
 
 
 // ======= Logica para BD Relacional =====
